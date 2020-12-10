@@ -1,0 +1,9 @@
+---
+layout: post
+title:  " Geometric Motion Planning for Systems on Cylindrical Surfaces"
+date:   May 2019 - November 2020
+image: /images/jcdl2019.png
+categories: research
+authors: "<strong>Ruijie Fu</strong>, Shuoqi Chen"
+---
+This work studied a newly designed three-link, quasi-static system operating on curved surface. This new model allowed us to explore to what extent the traditional geometric concepts, such as the local connection  and the lie bracket techniques, can be used in motion planning on curved position space. We introduced a new "constraint projection" method to a variational gait optimizer and demonstrated how to design gaits that allow this example system to move on an inner cylindrical wall.
