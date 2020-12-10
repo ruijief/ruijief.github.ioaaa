@@ -1,14 +1,9 @@
 ---
 layout: post
-title:  "Venue Analytics: A Simple Alternative to Citation-Based Metrics"
-date:   2019-06-04 22:21:59 +00:00
+title:  " Geometric Motion Planning for Systems on Cylindrical Surfaces"
+date:   May 2019 - November 2020
 image: /images/jcdl2019.png
 categories: research
-author: "Leo Keselman"
-authors: "<strong>Leonid Keselman</strong>"
-venue: "ACM/IEEE Joint Conference on Digital Libraries"
-arxiv: https://arxiv.org/abs/1904.12573
-slides: /pdfs/jcdl2019.pdf
-code: https://github.com/leonidk/venue_scores
+authors: "<strong>Ruijie Fu</strong>, Shuoqi Chen"
 ---
-A bibliometric/scientometric project. Our main two results are a method of assigning value to all venues in computer science and a method to organize them into distinct subfields, all without using citation data. The resulting venue scores can be used to rank universities' by scholarly output, and produce a responsive author-level metric.
+This work studied a newly designed three-link, quasi-static system operating on curved surface. This new model allowed us to explore to what extent the traditional geometric concepts, such as the local connection  and the lie bracket techniques, can be used in motion planning on curved position space. We introduced a new "constraint projection" method to a variational gait optimizer and demonstrated how to design gaits that allow this example system to move on an inner cylindrical wall.
