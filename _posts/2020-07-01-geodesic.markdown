@@ -2,7 +2,7 @@
 layout: post
 title:  "Geodesic Complexity of Motion Planning on Lollipop Graph"
 time: "June 2020 - Present"
-image: /images/kinematic.png
+image: /images/geodesic.png
 categories: research
 background: https://arxiv.org/abs/2002.07693
 authors: "<strong>Ruijie Fu</strong>, Michael Harrison, Florian Frick"
