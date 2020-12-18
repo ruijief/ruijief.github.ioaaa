@@ -1,0 +1,10 @@
+---
+layout: post
+title:  "Geodesic Complexity of Motion Planning on Lollipop Graph"
+time: "June 2020 - Present"
+image: /images/kinematic.png
+categories: research
+background: https://arxiv.org/abs/2002.07693
+authors: "<strong>Ruijie Fu</strong>, Michael Harrison, Florian Frick"
+---
+Similar to the definition of topological complexity, geodesic complexity is a property that encodes the minimum number of continuous path planning rules needed to describe the geodesic between robot system's starting configuration and ending configuration in a space. It is invariant under isometries. We find a metric space that potentially has higher geodesic complexity than topological complexity, and study it by using the stratification method as given in the background paper above.
