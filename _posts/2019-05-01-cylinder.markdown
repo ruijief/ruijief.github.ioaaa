@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  " Geometric Motion Planning for Systems on Cylindrical Surfaces"
+title:  "Geometric Motion Planning for Systems on Cylindrical Surfaces"
 time: "May 2019 - November 2020"
 image: /images/cylinder.png
 categories: research
