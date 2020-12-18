@@ -1,0 +1,11 @@
+---
+layout: post
+title:  "Localizing a Monocular Camera in a 3D Point Cloud Map"
+time: "October 2020 - Present"
+image: /images/matching.gif
+categories: research
+background: "https://arxiv.org/abs/1912.00096"
+authors: "Max Yin, <strong>Ruijie Fu</strong>"
+---
+Our aim is to map once with UGV equipped with lidar, and reuse the lidar map multiple times for resource-limited UAVs with only onboard cameras. To achieve this goal, we utilize an original spherical convolution feature that is invariant to the orientation, and the sequence matching algorithm extended to 2d.
+
