@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  " Geometric Motion Planning for Systems on Cylindrical Surfaces"
-venue: "May 2019 - November 2020"
+time: "May 2019 - November 2020"
 image: /images/cylinder.png
 categories: research
 authors: "<strong>Ruijie Fu</strong>, Shuoqi Chen"
