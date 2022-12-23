@@ -18,6 +18,10 @@
 
 
 <body>
+    <style>
+    @import url("timesheet/timesheet-white.min.css");
+  </style>
+  <script src="timesheet/timesheet.min.js"></script>
   <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
     <tr style="padding:0px">
       <td style="padding:0px">
@@ -34,19 +38,26 @@
               </p>
               <p style="text-align:center">
                 <a target="_blank" href="https://mailhide.io/e/LysyZtUf"> Email</a> &nbsp;/&nbsp;
-                <a href="https://www.linkedin.com/in/ruijie-fu-13190a137/"> LinkedIn </a>
+                <a href="https://www.linkedin.com/in/ruijie-fu-13190a137/"> LinkedIn </a>&nbsp;/&nbsp;
+                <a href="/pdfs/RuijieFu_Resume.pdf"> Resume </a> 
               </p>
             </td>
             <td style="padding:2.5%;width:40%;max-width:40%">
-              <img style="width:100%;max-width:100%" alt="profile photo" src="images/propic.jpg">
+              <img style="width:70%;max-width:70%" alt="profile photo" src="images/propic.jpg">
             </td>
           </tr>
         </table>
-
+        <div id="white" class="white">
+          <div id="timesheet"></div>
+        </div>
+        <p style="text-align:center">
+          <a href="#research">Research</a> &nbsp;/&nbsp;
+          <a href="#project">Project</a>
+        </p>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr>
             <td style="padding:2.5%;width:100%;vertical-align:middle">
-              <h2>Research</h2>
+              <h2 id="research">Research</h2>
             </td>
           </tr>
         </table>
@@ -56,7 +67,7 @@
           {% for cat in post.categories %}
           {% if cat == 'research' %}
           <tr>
-            <td style="padding:7%;width:30%;vertical-align:middle;min-width:120px">
+            <td style="padding:7%;width:45%;vertical-align:middle;min-width:120px">
               <!-- <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px"></td> -->
               <img src="{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
             </td>
@@ -95,6 +106,66 @@
           {% endfor %}
         </table>
         <br>
+        <!-- begin of project (to be changed) -->
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:2.5%;width:100%;vertical-align:middle">
+              <h2 id="project">Project</h2>
+            </td>
+          </tr>
+        </table>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+
+          {% for post in site.posts %}
+          {% for cat in post.categories %}
+          {% if cat == 'project' %}
+          <tr>
+            <td style="padding:7%;width:45%;vertical-align:middle;min-width:120px">
+              <img src="{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
+            </td>
+            <td style="padding:2.5%;width:75%;vertical-align:middle">
+              <h3>{{post.title}}</h3>
+              {% if post.keyword %}
+              <br>
+                {{post.keyword}}
+              {% endif %}
+              <br>
+              {{post.authors}}
+              <br>
+              <em>{{post.time}}</em>
+              <br>
+              {% if post.background %}
+              <a href="{{post.background}}" target="_blank">Background</a> /
+              {% endif %}
+              {% if post.poster %}
+              <a href="{{post.poster}}" target="_blank">Poster</a> /
+              {% endif %}
+              {% if post.video %}
+              <a href="{{post.video}}" target="_blank">Video</a> /
+              {% endif %}
+              {% if post.arxiv %}
+              <a href="{{post.arxiv}}" target="_blank">arxiv</a> /
+              {% endif %}
+              {% if post.code %}
+              <a href="{{post.code}}" target="_blank">Code</a> /
+              {% endif %}
+              {% if post.news %}
+              <a href="{{post.news}}" target="_blank">News</a> /
+              {% endif %}
+              {% if post.slides %}
+              <a href="{{post.slides}}" target="_blank">Slides</a> /
+              {% endif %}
+              {% if post.paper %}
+              <a href="{{post.paper}}" target="_blank">Paper</a> /
+              {% endif %}
+              {{ post.excerpt }}
+            </td>
+          </tr>
+          {% endif %}
+          {% endfor %}
+          {% endfor %}
+        </table>
+        <!-- end of project (to be changed) -->
         <br>
         <br>
 
@@ -113,6 +184,11 @@
       </td>
     </tr>
   </table>
+    <script>
+  new Timesheet('timesheet', 2017, 2025, [
+  ['01/2017', '02/2017', 'DJI，Robomaster', 'lorem'],
+  ['11/2021', '05/2023', 'rWAAM', 'ipsum']]);
+  </script>
 </body>
 
 </html>
