@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: project
 title:  "Localizing a Monocular Camera in a 3D Point Cloud Map"
 time: "October 2020 - March 2021"
 image: /images/matching.gif

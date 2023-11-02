@@ -97,6 +97,9 @@
               {% if post.slides %}
               <a href="{{post.slides}}">slides</a> /
               {% endif %}
+              {% if post.paper %}
+              <a href="{{post.paper}}" target="_blank">Paper</a> /
+              {% endif %}
               <p></p>
               {{ post.excerpt }}
             </td>
@@ -136,9 +139,6 @@
               <br>
               {% if post.background %}
               <a href="{{post.background}}" target="_blank">Background</a> /
-              {% endif %}
-              {% if post.poster %}
-              <a href="{{post.poster}}" target="_blank">Poster</a> /
               {% endif %}
               {% if post.video %}
               <a href="{{post.video}}" target="_blank">Video</a> /
@@ -185,7 +185,7 @@
     </tr>
   </table>
     <script>
-  new Timesheet('timesheet', 2017, 2027, [
+  new Timesheet('timesheet', 2017, 2030, [
   ['09/2016', '03/2019', 'SDC Buggy Team (Mechanics)', 'ipsum'],
   ['02/2017', '12/2023', 'CMU Biorobotic Lab', 'lorem'],
   ['09/2017', '01/2023', 'CMU Kiltie Band', 'ipsum'],
