@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Geodesic Complexity of Motion Planning on Lollipop Graph"
-time: "June 2020 - Present"
+time: "June 2020 - May 2021"
 image: /images/geodesic.png
 categories: research
 background: https://arxiv.org/abs/2002.07693

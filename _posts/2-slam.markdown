@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Localizing a Monocular Camera in a 3D Point Cloud Map"
-time: "October 2020 - Present"
+time: "October 2020 - March 2021"
 image: /images/matching.gif
 categories: research
 background: "https://arxiv.org/abs/1912.00096"
