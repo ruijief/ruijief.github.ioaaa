@@ -1,0 +1,10 @@
+---
+layout: post
+title:  "Towards Mechanical Communication in Multi-Agent Locomotive Systems"
+time: "March 2023 - Present"
+image: /images/torus.png
+categories: research
+authors: "<strong>Ruijie Fu</strong>, Scott Kelly, Howie Choset"
+keyword: <img src="https://img.shields.io/badge/-Matlab-blue"/>&nbsp;<img src="https://img.shields.io/badge/-python-blue"/>&nbsp;<img src="https://img.shields.io/badge/-Mathematica-blue"/>&nbsp;<img src="https://img.shields.io/badge/-Lagrange d'Alembert-green"/>&nbsp
+---
+Many biological multi-agent systems exhibit a mechanism for information exchange among individuals known as mechanical communication, which leads to the emergence of collective behavior within the group. One such example is the swarming behavior of bacteria, where they form rafts and move collectively over solid surfaces using flagella. Similarly, multi-agent groups of articulated robots in a shared environment can dynamically adjust their shape and movements, influencing each other's motion through the ambient media. Recognizing the potential significance of this mechanism, we would like to investigate and harness the power of mechanical communication in the control of multi-agent locomotive systems. To begin with, this thesis focuses on a relatively simple system consisting of principally kinematic robots that share a movable platform, as opposed to more complex ambient media like air or fluid.

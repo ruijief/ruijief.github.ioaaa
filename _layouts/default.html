@@ -43,7 +43,7 @@
               </p>
             </td>
             <td style="padding:2.5%;width:40%;max-width:40%">
-              <img style="width:70%;max-width:70%" alt="profile photo" src="images/propic.jpg">
+              <img style="width:90%;max-width:90%" alt="profile photo" src="images/propic.jpg">
             </td>
           </tr>
         </table>
@@ -73,6 +73,10 @@
             </td>
             <td style="padding:2.5%;width:75%;vertical-align:middle">
               <h3>{{post.title}}</h3>
+              {% if post.keyword %}
+              <br>
+                {{post.keyword}}
+              {% endif %}
               <br>
               {{post.authors}}
 
