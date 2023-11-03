@@ -2,7 +2,7 @@
 layout: post
 title:  "Towards Mechanical Communication in Multi-Agent Locomotive Systems"
 time: "March 2023 - Present"
-image: /images/comm.png
+image: /images/comm.jpg
 categories: research
 authors: "<strong>Ruijie Fu</strong>, Scott Kelly, Howie Choset"
 keyword: <img src="https://img.shields.io/badge/-Matlab-blue"/>&nbsp;<img src="https://img.shields.io/badge/-python-blue"/>&nbsp;<img src="https://img.shields.io/badge/-Mathematica-blue"/>&nbsp;<img src="https://img.shields.io/badge/-Lagrange d'Alembert-green"/>&nbsp;<img src="https://img.shields.io/badge/-snake robot-green"/>&nbsp
