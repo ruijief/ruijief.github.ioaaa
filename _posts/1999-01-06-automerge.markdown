@@ -1,9 +1,9 @@
 ---
-layout: project
+layout: post
 title:  "AutoMerge: A Framework for Map Assembling and Smoothing in City-scale Environments"
 time: "July 2021 - March 2022"
 image: /images/autoM.png
-categories: research
+categories: project
 video: https://www.youtube.com/watch?v=6sCWeDmQITQ
 code: https://github.com/MetaSLAM/AutoMerge_Docker
 authors: "<strong>Ruijie Fu</strong>, Max Yin"
