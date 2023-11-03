@@ -6,6 +6,6 @@ image: /images/cylinder.png
 categories: research
 paper: https://ieeexplore.ieee.org/document/9635861
 authors: "Shuoqi Chen, <strong>Ruijie Fu</strong>, Ross Hatton, Howie Choset"
-keyword: <img src="https://img.shields.io/badge/-Matlab-blue"/>&nbsp;<img src="https://img.shields.io/badge/-geometric mechanics-green"/>&nbsp;<img src="https://img.shields.io/badge/-snake robot-green"/>&nbsp;<img src="https://img.shields.io/badge/-broken symmetry-green"/>&nbsp
+keyword: <img src="https://img.shields.io/badge/-Matlab-blue"/>&nbsp;<img src="https://img.shields.io/badge/-geometric mechanics-green"/>&nbsp;<img src="https://img.shields.io/badge/-broken symmetry-green"/>&nbsp;<img src="https://img.shields.io/badge/-snake robot-yellow"/>&nbsp
 ---
 This work studied a newly designed three-link, quasi-static system operating on curved surface. This new model allowed us to explore to what extent the traditional geometric concepts, such as the local connection  and the lie bracket techniques, can be used in motion planning on curved position space. We introduced a new "constraint projection" method to a variational gait optimizer and demonstrated how to design gaits that allow this example system to move on an inner cylindrical wall.
