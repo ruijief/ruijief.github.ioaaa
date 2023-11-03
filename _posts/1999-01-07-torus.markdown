@@ -1,0 +1,9 @@
+---
+layout: post
+title:  "Geometric Motion Planning for Systems with Cyclic Shape Spaces"
+time: "October 2019 - January 2023"
+image: /images/torus.png
+categories: research
+authors: "<strong>Ruijie Fu</strong>, Ross Hatton, Howie Choset"
+---
+Previous research in geometric mechanics has primarily focused on shape spaces that do not include cyclic internal degrees of freedom, such as revolute joints without joint limits. This work extends prior work to cyclic shape spaces, including shape spaces that are cylinders and tori. By explicitly analyzing the topology of the underlying shape space, we consider simple closed paths that wrap around the cyclic degree of freedom and derive geometric tools for motion planning and gait optimization on cyclic shape spaces.
