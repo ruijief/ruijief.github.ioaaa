@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memories in Photos 📸</title>
+    <style>
+        /* Center everything */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #fbece6;
+            margin: 0;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        /* Gallery Container */
+        .gallery-container {
+            max-width: 900px;
+            margin: auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Title */
+        h1 {
+            font-size: 2.5rem;
+            color: #ff4d4d;
+        }
+
+        /* Gallery Grid */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        /* Individual Gallery Images */
+        .gallery-item {
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        /* Hover Effect */
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Lightbox Styles */
+        #lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+        }
+
+        #lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+        }
+
+        /* Mobile Optimization (Phones up to 1000px) */
+        @media (max-width: 1000px) {
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr); /* Force 2 columns */
+            }
+        }
+
+        /* Fireworks Container */
+        .fireworks-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        /* Heart Fireworks */
+        .firework {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: explode 1.5s linear forwards;
+        }
+
+        /* Correct Heart Shape */
+        .heart {
+            position: relative;
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            transform: rotate(-45deg);
+        }
+
+        .heart::before,
+        .heart::after {
+            content: "";
+            position: absolute;
+            width: 20px;  /* Perfect circle size */
+            height: 20px;
+            background-color: inherit;
+            border-radius: 50%;
+        }
+
+        .heart::before {
+            top: -10px;
+            left: 0px;
+        }
+
+        .heart::after {
+            left: 10px;
+            top: 0px;
+        }
+
+        /* Firework Animation */
+        @keyframes explode {
+            0% { transform: scale(0.5); opacity: 1; }
+            50% { transform: scale(1.5); opacity: 0.8; }
+            100% { transform: scale(2); opacity: 0; }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Fireworks Effect -->
+    <div class="fireworks-container"></div>
+
+    <div class="gallery-container">
+        <h1>📸 Memories in Photos</h1>
+        <p>Here are some of our most precious moments together. Click on a photo to see it in full size! 💖</p>
+
+        <div class="gallery-grid">
+            <img src="images/photo1.jpg" class="gallery-item" onclick="openLightbox(this)">
+            <img src="images/photo2.jpg" class="gallery-item" onclick="openLightbox(this)">
+            <img src="images/photo3.jpg" class="gallery-item" onclick="openLightbox(this)">
+            <img src="images/photo4.jpg" class="gallery-item" onclick="openLightbox(this)">
+            <img src="images/photo5.jpg" class="gallery-item" onclick="openLightbox(this)">
+            <img src="images/photo6.jpg" class="gallery-item" onclick="openLightbox(this)">
+        </div>
+    </div>
+
+    <!-- Lightbox (Full-screen image view) -->
+    <div id="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img">
+    </div>
+
+    <script>
+        // Lightbox Functionality
+        function openLightbox(img) {
+            document.getElementById("lightbox").style.display = "flex";
+            document.getElementById("lightbox-img").src = img.src;
+        }
+
+        function closeLightbox() {
+            document.getElementById("lightbox").style.display = "none";
+        }
+
+        // Fireworks Effect
+        function createFirework() {
+            const fireworksContainer = document.querySelector(".fireworks-container");
+            if (!fireworksContainer) return;
+
+            const firework = document.createElement('div');
+            firework.classList.add('firework');
+
+            // Create heart inside firework
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+
+            // Random heart colors
+            const colors = ["red", "pink", "#ff66b2", "#ff4d4d"];
+            heart.style.background = colors[Math.floor(Math.random() * colors.length)];
+
+            firework.appendChild(heart);
+
+            // Position the heart randomly
+            firework.style.left = Math.random() * 100 + "vw";
+            firework.style.top = Math.random() * 40 + "vh";
+
+            fireworksContainer.appendChild(firework);
+
+            setTimeout(() => {
+                firework.remove();
+            }, 1500);
+        }
+
+        // Start fireworks and make them appear frequently
+        window.onload = function () {
+            setInterval(createFirework, 300); // Fires every 300ms for a festive effect
+        };
+    </script>
+
+</body>
+</html>
