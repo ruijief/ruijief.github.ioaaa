@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Letter for You 💌</title>
+    <style>
+        /* General Page Styling */
+        body {
+            font-family: 'Georgia', serif;
+            text-align: center;
+            background-color: #fbece6;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Letter Paper */
+        .letter-container {
+            position: relative;
+            max-width: 700px;
+            width: 100%;
+            background: #fffaf0;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+            border: 2px solid #ffcccb;
+            text-align: left;
+        }
+
+        h1 {
+            font-size: 2rem;
+            color: #ff4d4d;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #555;
+            text-align: center;
+        }
+
+        /* Textarea for Writing */
+        textarea {
+            width: 97%;
+            height: 200px;
+            font-size: 1.2rem;
+            font-family: 'Georgia', serif;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            resize: none;
+            background: rgba(255, 228, 196, 0.5);
+            outline: none;
+        }
+
+        /* Save Button */
+        .save-btn {
+            margin-top: 10px;
+            display: block;
+            width: 100%;
+            padding: 10px;
+            font-size: 1.2rem;
+            font-family: 'Georgia', serif;
+            background: #ff6b6b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .save-btn:hover {
+            background: #ff4d4d;
+        }
+
+        /* Reminder */
+        .reminder {
+            font-size: 1rem;
+            color: #888;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        /* Floral Decorations */
+        .flower-top {
+            position: absolute;
+            top: -90px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 180px;
+        }
+
+        .flower-bottom {
+            position: absolute;
+            bottom: -60px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+        }
+
+        /* Mobile Optimization */
+        @media (max-width: 1000px) {
+            .letter-container {
+                max-width: 90%;
+                padding: 20px;
+            }
+
+            textarea {
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="letter-container">
+        <img src="images/flw2.png" alt="Flowers" class="flower-top">
+        <h1>A Letter to Me 💌</h1>
+        <p>Is there anything you want to say to me? Write it down! 💖</p>
+        
+        <textarea id="messageBox" placeholder="Write your message here..."></textarea>
+        
+        <button class="save-btn" onclick="saveMessage()">💾 Save for Now</button>
+        <button class="save-btn" onclick="sendMessage()">📩 Send To Me</button>
+        
+        <p class="reminder">⚠️ This text will <strong>disappear</strong> when you refresh the page! Please save it if you want to keep it.</p>
+
+        <img src="images/flw.png" alt="Flowers" class="flower-bottom">
+    </div>
+
+    <script>
+        // Load saved message from localStorage
+        document.getElementById("messageBox").value = localStorage.getItem("tempMessage") || "";
+
+        function saveMessage() {
+            let message = document.getElementById("messageBox").value;
+            localStorage.setItem("tempMessage", message);
+            alert("Your message is temporarily saved! It will disappear if your local storage is full.");
+        }
+        function sendMessage() {
+            let message = document.getElementById("messageBox").value;
+            localStorage.setItem("tempMessage", message);
+            alert("Your message is not sent! Because I am too lazy to write the backend lol. It is saved locally though. Copy paste and just message me :)");
+        }
+    </script>
+
+</body>
+</html>

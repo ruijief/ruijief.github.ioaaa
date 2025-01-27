@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memories in Audios 🎙️</title>
+    <style>
+        /* General Page Styling */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #fbece6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .audio-container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #ff4d4d;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #555;
+        }
+
+        /* Audio List Styling */
+        .audio-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .audio-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #fff3e6;
+            padding: 12px;
+            margin: 8px 0;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .audio-item:hover {
+            background: #f9d6c1;
+        }
+
+        .audio-item span {
+            font-size: 1.2rem;
+            flex: 1;
+            text-align: left;
+            padding-left: 10px;
+        }
+
+        /* Audio Player Styling */
+        audio {
+            width: 100%;
+            max-width: 300px;
+        }
+
+        /* Mobile Optimization (Phones up to 1000px) */
+        @media (max-width: 1000px) {
+            .audio-item {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .audio-item span {
+                text-align: center;
+                padding-bottom: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="audio-container">
+        <h1>🎙️ Memories in Audios</h1>
+        <p>Listen to some of our best moments together, captured in sound! 💖</p>
+
+        <ul class="audio-list">
+            <li class="audio-item">
+                <span>✨ Special Message</span>
+                <audio controls>
+                    <source src="audio/audio1.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </li>
+
+            <li class="audio-item">
+                <span>😂 Funny Moment</span>
+                <audio controls>
+                    <source src="audio/audio2.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </li>
+
+            <li class="audio-item">
+                <span>❤️ Sweet Words</span>
+                <audio controls>
+                    <source src="audio/audio3.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </li>
+
+        </ul>
+    </div>
+
+</body>
+</html>
