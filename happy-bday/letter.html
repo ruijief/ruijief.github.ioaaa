@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Love Letter to You 💌</title>
+    <style>
+        /* Romantic Page Styling */
+        body {
+            font-family: 'Georgia', serif;
+            text-align: center;
+            background: url('images/romantic-bg.jpg') no-repeat center center/cover;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .letter-container {
+            max-width: 800px;
+            margin: auto;
+            padding: 30px;
+            background: rgba(255, 245, 238, 0.95); /* Soft dreamy overlay */
+            border-radius: 15px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #ff4d4d;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #333;
+            line-height: 1.6;
+            text-align: left;
+            padding: 0 20px;
+        }
+
+        /* Audio Player Styling */
+        .audio-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        audio {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+        }
+
+        /* Mobile Optimization */
+        @media (max-width: 1000px) {
+            .letter-container {
+                max-width: 90%;
+                padding: 20px;
+            }
+        }
+
+        /* Fireworks Container */
+        .fireworks-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        /* Heart Fireworks */
+        .firework {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: explode 1.5s linear forwards;
+        }
+
+        /* Correct Heart Shape */
+        .heart {
+            position: relative;
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            transform: rotate(-45deg);
+        }
+
+        .heart::before,
+        .heart::after {
+            content: "";
+            position: absolute;
+            width: 20px;  /* Perfect circle size */
+            height: 20px;
+            background-color: inherit;
+            border-radius: 50%;
+        }
+
+        .heart::before {
+            top: -10px;
+            left: 0px;
+        }
+
+        .heart::after {
+            left: 10px;
+            top: 0px;
+        }
+
+        /* Firework Animation */
+        @keyframes explode {
+            0% { transform: scale(0.5); opacity: 1; }
+            50% { transform: scale(1.5); opacity: 0.8; }
+            100% { transform: scale(2); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="fireworks-container"></div>
+
+    <div class="letter-container">
+        <h1>💌 A Letter for You</h1>
+
+        <p><strong>How time flies.</strong> We've been together for over a year now. I still remember last year on your birthday, I recorded a message for you—are we making this a tradition? 😊</p>
+
+        <p>Looking back, so much has changed over the past year. We've shared countless beautiful moments—laughing together, exploring new places, discovering new things about each other. But we've also faced challenges, moments of frustration, misunderstandings, even sadness. Yet here we are, still together, still in love.</p>
+
+        <p>I am so grateful to have you—someone who cares deeply, who is willing to talk through things, to work together with me to build something real, something lasting. Love isn't just about the happiest moments; it's about choosing each other, every single day, even when things aren't perfect. And I love that we choose each other.</p>
+
+        <p>As we step into the future, I look forward to everything we will build together. The adventures we will go on, the memories we will create, the life we will shape hand in hand. I know it won't always be easy, but with you, I know it will always be worth it.</p>
+
+        <p>So on this special day, I just want to say—<strong>Happy Birthday, Aaron.</strong> 💖 Thank you for being you. Thank you for being with me. And I do love you.</p>
+
+        <!-- Audio Player -->
+        <div class="audio-container">
+            <audio controls>
+                <source src="audio/bday.m4a" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </div>
+
+    <script>
+        // Fireworks Effect
+        function createFirework() {
+            const fireworksContainer = document.querySelector(".fireworks-container");
+            if (!fireworksContainer) return;
+
+            const firework = document.createElement('div');
+            firework.classList.add('firework');
+
+            // Create heart inside firework
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+
+            // Random heart colors
+            const colors = ["red", "pink", "#ff66b2", "#ff4d4d"];
+            heart.style.background = colors[Math.floor(Math.random() * colors.length)];
+
+            firework.appendChild(heart);
+
+            // Position the heart randomly
+            firework.style.left = Math.random() * 100 + "vw";
+            firework.style.top = Math.random() * 40 + "vh";
+
+            fireworksContainer.appendChild(firework);
+
+            setTimeout(() => {
+                firework.remove();
+            }, 1500);
+        }
+
+        // Start fireworks and make them appear frequently
+        window.onload = function () {
+            setInterval(createFirework, 300); // Fires every 300ms for a festive effect
+        };
+    </script>
+
+
+</body>
+</html>
